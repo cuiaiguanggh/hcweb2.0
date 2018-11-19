@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link href="content/css/Site.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+        .iw_poi_title {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap;
+        }
+    
+        .iw_poi_content {
+            font: 12px arial,sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+        <input type="hidden" id="selectIndex" value="6">
+        <div class="mbox"></div>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+        
+        <div class="text-center title-section">CONTACT OUR</div>
+        <div class="section-box">联系我们</div>
+        
+        
+        <div class="row wrap">
+            <div class="col-md-6">
+                <div style="margin:auto;text-align:left;font-size:18px;padding:20px 10px;">
+                    <address>
+                        <strong>电话:</strong><a href="tel:0570-4333636">0570-4333636</a><br />
+                        <strong>传真:</strong><a href="#">0570-4320320</a>
+                    </address>
+                    <address>
+                        <strong>邮编:</strong>324100<br />
+                    </address>
+                    <address>
+                        <strong>地址:</strong>浙江省江山市江东经济开发区兴工路1号
+                    </address>
+                </div>
+            </div>
+        
+            <div class="col-md-6">
+                <br />
+                <h1>联系我们</h1>
+                <h2 style="color:#ccc;font-weight:bold">CONTACTS US</h2>
+            </div>
+        </div>
+        
+        <div style="width:1200px;height:550px;border:#ccc solid 1px;margin:auto" id="dituContent"></div>
+        <div class="fbox">
+        </div>        
+        <script type="text/javascript">
+            //创建和初始化地图函数：
+            function initMap() {
+                createMap();//创建地图
+                setMapEvent();//设置地图事件
+                addMapControl();//向地图添加控件
+            }
+        
+            //创建地图函数：
+            function createMap() {
+                var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                var point = new BMap.Point(118.724326, 28.800462);//定义一个中心点坐标
+                map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
+                window.map = map;//将map变量存储在全局
+            }
+        
+            //地图事件设置函数：
+            function setMapEvent() {
+                map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                map.enableKeyboard();//启用键盘上下左右键移动地图
+            }
+        
+            //地图控件添加函数：
+            function addMapControl() {
+                //向地图中添加缩放控件
+                var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+                map.addControl(ctrl_nav);
+                //向地图中添加缩略图控件
+                var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+                map.addControl(ctrl_ove);
+                //向地图中添加比例尺控件
+                var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+                map.addControl(ctrl_sca);
+            }
+        
+        
+            initMap();//创建和初始化地图
+        </script>
+        <script src="scripts/main.js"></script>
+</body>
+</html>
+

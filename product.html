@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="浙江汇诚电力科技有限公司,汇诚电力、汇诚、电力、电器、高低压成套设备、箱式变电站、电力变压器、风能变电站、电缆分接箱、不锈钢配电箱" />
+    <meta name="Keywords" content="浙江汇诚电力科技有限公司,汇诚电力,汇诚,电力,电器,浙江汇诚,高低压成套设备,箱式变电站,电力变压器,风能变电站,电缆分接箱,不锈钢配电箱" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品中心</title>
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link href="content/css/Site.css" rel="stylesheet" />
+    <link href="content/css/product.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+    <input type="hidden" id="selectIndex" value="1">
+    <div class="mbox"></div>
+    <div class="banner-product-box">
+
+    </div>
+    
+    <p class="title-section text-center">PRODUCT CENTER</p>
+    
+    <div class="section-box">产品中心</div>
+    
+    <div class="product-box  clearfix wrap">
+
+        <div class="row">
+            <div class="col-md-2 product-menu" >
+                <ul id="product-menu">
+                    <li><strong>产品目录</strong></li>
+                    <li v-for="p in items" >
+                        <span style="background-color:#0095D9;display: block;color: #fff ;float: left;margin-top: 4px;line-height: 9px;padding: 2px;
+                        border-radius: 3px;margin-right: 3px;">></span><a style="cursor: pointer;float: left;" :id="p.type" v-on:click='navToType($event)'>{{p.title}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 productInfo-box">
+                    <div class="row" id="product-box">
+                            <div class="col-lg-4 col-md-4" v-for="p in products">
+                                <div class="product-inner" :id="p.id" v-on:click='navToInfo($event)'>
+                                    <div >
+                                        <img :src="p.img[0].url" :alt="p.title" />
+                                    </div>
+                                    <div class="product-title">{{p.title}}</div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+
+        
+</div>  
+<div class="fbox"></div> 
+<script src="scripts/main.js" ></script>
+<script src="scripts/vue.min.js"></script>
+<script src="scripts/product.js"></script>
+</body>
+</html>

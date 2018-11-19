@@ -1,0 +1,244 @@
+﻿html,body {
+    padding:0;
+    font-family: Arial, "Microsoft YaHei";
+    /*height:100%;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+*{
+    padding:0;margin:0;
+}
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+ul,li{
+    list-style:none;
+}
+.body-content{
+    width:100%;
+    max-width:100%;
+    padding:0;
+}
+.navbar-inverse {
+    background-color: #fff;
+    border: 0;
+    border-radius: 0 !important;
+    color: #000;
+    margin: 0;
+    box-shadow: 0 0 2px 2px #dedede;
+}
+
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color:#0094ff;
+}
+
+.navbar-nav li.active{
+   border-bottom:3px solid #0094ff;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus{
+    color:#0094ff;
+}
+.navbar-inverse .navbar-nav > .active > a{
+   background-color:transparent !important;
+   color:#0094ff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #4E4E4E;
+    font-size: 16px;
+}
+.navbar-brand{
+    font-size:30px;
+    color: #4E4E4E !important;
+}
+.navbar-inverse .navbar-nav > .active > a:hover{
+   color:#0094ff !important;
+}
+.navbar-toggle {
+    background-color: #0094ff !important;
+    border: #0094ff !important;
+
+}
+
+
+
+
+.wrap{
+    max-width:1200px;
+    background-color:#fff;
+    /*height:1200px;*/
+    margin:0 auto;
+}
+.wrap>div{
+    margin-top:24px;
+}
+.foot-nav-box>ul>li{
+    float:left;
+    width:25%;
+}
+.foot-nav-box>ul>li h4{
+    font-weight:bold;
+    margin:0;
+    padding:10px 0px;
+    border-bottom:1px solid #ccc;
+    position:relative;
+    max-width:100px;
+    display:inline;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.foot-nav-box>ul>li h4:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    width:22px;
+    height:3px;
+    bottom:-2px;
+    left:0;
+    background-color:#0094ff;
+}
+.foot-nav-box>ul>li p{
+    margin:4px 0;
+}
+.foot-nav-box>ul>li p a{
+    color:#333;
+}
+.foot-nav-box{
+    margin:35px auto 30px auto;
+}
+footer{
+    text-align:center;font-size:10px;background-color:#0095D9;padding:8px 0px;color:#fff;
+}
+footer p{
+    margin:0;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.title-section{
+    font-size:30px;
+    margin:30px auto 20px auto;
+}
+.section-box{
+    height:40px;
+    width:172px;
+    border:1px solid #ccc;
+    line-height:40px;
+    text-align:center;
+    font-size:24px;
+    margin:auto;
+    position:relative;
+    margin-bottom:15px;
+}
+.section-box::before,.section-box::after{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    height:1px;
+    width:120px;
+    border-top:1px solid #ccc;
+    top:50%;
+    
+}
+.section-box::before{
+    left:-100px;
+}
+.section-box::after{
+    right:-100px;
+}
+.text-indent{
+    text-indent:2em;
+}
+
+.logo-box{
+    float: left;
+    height: 65px;
+    margin-right: 14px;
+}
+.name-box{
+    display: inline-block;
+    font-size: 18px;
+    float: left;
+    margin-top: 12px;
+}
+.name-box a{
+    text-decoration:none !important;
+    color:#000;
+    font-size:26px;
+}
+.name-box p{
+    letter-spacing:1px;
+    font-size:13px;
+    margin: 6px 0 10px;
+}
+
+
+@media (min-width: 768px){
+    ul.nav.navbar-nav{
+        float:right;
+    }
+    .navbar-inverse{
+        padding: 16px 0 8px 0;
+    }
+    .container > .navbar-header, .container > .navbar-collapse {
+        margin-left: 15px;
+    }
+    
+
+}
+
+@media (max-width: 768px){
+    .navbar-nav li.active{
+        background-color:#0094ff;
+    }
+    .navbar-nav li.active a,.navbar-inverse .navbar-nav > .active > a:hover{
+        color:#fff !important;
+    }
+}
+
+
+
+@media (max-width: 1200px){
+    .wrap{
+        padding:0 15px;
+    }
+
+}
+
+@media (min-width: 1200px){
+    .navbar-container {
+        max-width: 1270px;
+    }
+}
+@media (min-width: 768px){
+    .navbar > .container .navbar-brand {
+    margin-left: 0px;
+}
+}
+.headbox iframe{
+    overflow: hidden;
+    height: 93px;
+}
+
+.footbox iframe{
+    overflow: hidden;
+    height: 240px;
+}

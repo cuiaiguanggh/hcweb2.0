@@ -1,0 +1,18 @@
+﻿
+
+
+.honor-inner{
+    overflow:hidden;
+    position:relative;
+    width:300px;
+}
+.honor-inner img{
+    width:100%;
+}
+
+.honor-box .row>div{
+    margin-bottom:30px;
+}
+.honor-border{
+    border:1px solid #dedede;
+}

@@ -1,0 +1,21 @@
+﻿
+.show-inner {
+    /* border: 1px solid #ccc;   */
+    overflow: hidden;
+    /* position: relative;
+    cursor: pointer;
+    float: left; */
+    /* padding: 10px; */
+    float: left;
+    width:240px;
+}
+.show-inner img {
+    width: 100%;
+    min-height: 160px;
+}
+.show-inner>p {
+    text-align: center;padding-top:5px;
+}
+.show-box .row > div {
+    margin-bottom: 10px;
+}
